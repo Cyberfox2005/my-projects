@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Créer un nouveau compte</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="lemmo css.css" rel="stylesheet">
+    <link rel="sql" href="mydatabase.sql">
+    <style>
+        .center-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 70vh;
+        }
+        .account-form {
+            background: rgba(255,255,255,0.95);
+            border-radius: 12px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.13);
+            padding: 32px 32px 24px 32px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-width: 320px;
+        }
+        .account-form h3 {
+            margin: 12px 0 4px 0;
+            color: #d32f2f;
+            font-size: 1.1rem;
+            text-align: left;
+            width: 100%;
+        }
+        .account-form input[type="text"],
+        .account-form input[type="email"],
+        .account-form input[type="number"],
+        .account-form input[type="password"] {
+            width: 100%;
+            padding: 8px 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: 1px solid #00ff00;
+            font-size: 1rem;
+        }
+        .account-form label {
+            margin-right: 8px;
+        }
+        .account-form input[type="radio"] {
+            margin-right: 4px;
+        }
+        .account-form input[type="submit"],
+        .account-form input[type="reset"] {
+            margin: 12px 8px 0 0;
+            padding: 8px 18px;
+            border-radius: 5px;
+            border: none;
+            background: #d32f2f;
+            color: #fff;
+            font-weight: bold;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .account-form input[type="submit"]:hover,
+        .account-form input[type="reset"]:hover {
+            background: #00ff00;
+            color: #430101;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-top">
+            <div class="logo-title">
+                <h1><b><em>SPORT STORE</em></b></h1>
+                <h2><b><em>New account</em></b></h2> 
+            <div>
+                <select id="lang-select" name="lang">
+                    <option value="EN" selected>EN</option>
+                    <option value="FR">FR</option>
+                    <option value="AR">AR</option>
+                </select>
+            </div>    
+            
+                
+            </div>
+        <nav>
+            <a href="#">Contact Us</a>
+            <a href="#">About Us</a>
+        </nav>
+    </header>
+    <section class="center-section">
+        <form class="account-form" action="traitemet php" method="post">
+            <h1><b>New account</b></h1>
+            <h3>Fullname</h3>
+            <input type="text" name="prenom" required>
+            <h3>Name</h3>
+            <input type="text" name="nom" required>
+            <h3>Email</h3>
+            <input type="email" name="email" required>
+            <h3>Password</h3>
+            <input type="password" name="password" required>
+            <h3>Confirmation password</h3>
+            <input type="password" name="confirm_password" required>
+            <div style="margin: 12px 0;">
+                <label>Gander</label>
+                <label><input type="radio" name="sexe" value="homme" required> Homme</label>
+                <label><input type="radio" name="sexe" value="femme"> Femme</label>
+            </div>
+            <div>
+                <button><a href="lemmo web site travaux pratique 10.html"><input type="submit" name="envoyer" value="Envoyer"></a></button>
+                <input type="reset" name="Annuler" value="Annuler">
+            </div>
+        </form>
+    </section>
+</body>
+</html>
+

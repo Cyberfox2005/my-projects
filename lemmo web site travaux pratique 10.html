@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>SPORT STORE</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="lemmo css.css" rel="stylesheet">
+    <style>
+        .search-bar {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-left: 16px;
+        }
+        .search-bar input[type="text"] {
+            background: rgba(255,255,255,0.92);
+            border: 2px solid #00ff00;
+            border-radius: 6px;
+            padding: 8px 14px;
+            font-size: 1rem;
+            color: #430101;
+            outline: none;
+            transition: border 0.2s;
+        }
+        .search-bar input[type="text"]:focus {
+            border: 2px solid #d32f2f;
+        }
+        .search-bar button[type="submit"] {
+            background: #d32f2f;
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            padding: 8px 18px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.2s, color 0.2s;
+        }
+        .search-bar button[type="submit"]:hover {
+            background: #00ff00;
+            color: #430101;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-top">
+            <div class="logo-title">
+                <h1><b><em>SPORT STORE</em></b></h1>
+                <h2><b><em>Make everything about sport</em></b></h2>
+            </div>
+            <div>
+                <select id="lang-select" name="lang">
+                    <option value="EN" selected>EN</option>
+                    <option value="FR">FR</option>
+                    <option value="AR">AR</option>
+                </select>
+                <br>
+                <label for="select">
+                <section class="search-bar">
+                    <input type="text" placeholder="Search for products..." name="search" id="search" list="search-list">
+                    <datalist id="search-list">
+                        <option value="football" href="football.html"></option>
+                        <option value="Football-balls" href="Football-balls.html"></option>
+                        <option value="football-ball-futsal" href="Football-balls.html"></option>
+                        <option value="football-ball-street" href="Football-balls.html"></option>
+                        <option value="football-shoes" href="Football Shoes.html" ></option>
+                        <option value="football-jersey" href=""></option>
+                        <option value="football-gk-gloves" href=""></option>
+                        <option value="football-accessories" href=""></option>
+                        <option value="swimming"href=""></option>
+                        <option value="swimming-goggles"href=""></option>
+                        <option value="swimming-caps"href=""></option>
+                        <option value="swimming-swimwear"href=""></option>
+                        <option value="basketball"href=""></option>
+                        <option value="basketball-shoes"href=""></option>
+                        <option value="basketball-jersey"href=""></option>
+                        <option value="basketball-hoops"href=""></option>
+                        <option value="basketball-balls"href=""></option>
+                        <option value="tennis"href=""></option>
+                        <option value="tennis-rackets"href=""></option>
+                        <option value="tennis-balls"href=""></option>
+                        <option value="tennis-shoes"href=""></option>
+                        <option value="king-boxing"href=""></option>
+                        <option value="king-boxing-gloves"href=""></option>
+                        <option value="king-boxing-punching-bags"href=""></option>
+                        <option value="king-boxing-gear"href=""></option>
+                        <option value="contact-us"href=""></option>
+                        <option value="card"href=""></option>
+                     </datalist>
+                    </label>
+                    <button type="submit">Search</button>
+                </section>
+            </div>
+        </div>
+        <nav>
+            <a href="lemmo web site travaux pratique 10.html"><b><em>Home</em></b></a>
+            <a href="football.html"><b><em>Football</em></b></a>
+            <a href="Swimming.html"><b><em>Swimming</em></b></a>
+            <a href="Bsketball.html"><b><em>Basketball</em></b></a>
+            <a href="tinnes.html"><b><em>Tennis</em></b></a>
+            <a href="king boxing.html"><b><em>King Boxing</em></b></a>
+    
+            <a href="#"><b><em>Card</em></b></a>
+            <a href="#"><b><em>Contact Us</em></b></a>
+
+           
+        </nav>
+    </header>
+    <div class="products-container">
+        <div class="product-card">
+            <img src="football.jpg" alt="Football">
+            <h3>Football</h3>
+            <p>All you need for football: balls, shoes, jerseys, and more.</p>
+            <button><a href="football.html">Shop now</a></button>
+        </div>
+        <div class="product-card">
+            <img src="Swimming.jpg" alt="Swimming">
+            <h3>Swimming</h3>
+            <p>Swimwear, goggles, caps, and accessories for swimmers.</p>
+            <button><a href="swimming.html">Shop Now</a></button>
+        </div>
+        <div class="product-card">
+            <img src="basketball.jpg" alt="Basketball">
+            <h3>Basketball</h3>
+            <p>Basketballs, shoes, jerseys, and hoops for basketball lovers.</p>
+            <button><a href="Bsketball.html">Shop Now</a></button>
+        </div>
+        <div class="product-card">
+            <img src="tinnes.jpeg" alt="Tennis">
+            <h3>Tennis</h3>
+            <p>Rackets, balls, shoes, and apparel for tennis players.</p>
+            <button><a href="tinnes.html">Shop Now</a></button>
+        </div>
+        <div class="product-card">
+            <img src="king boxing.webp" alt="King Boxing">
+            <h3>King Boxing</h3>
+            <p>Gloves, punching bags, and gear for king boxing enthusiasts.</p>
+            <button><a href="king boxing.html">Shop Now</a></button>
+        </div>
+    </div>
+
+    
+    
+</body>
+</html>
