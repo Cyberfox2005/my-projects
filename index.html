@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Transport Link Algeria</title>
+    <style>
+        :root {
+            --main-bg: linear-gradient(135deg, #e0e7ef 0%, #f4f4f4 100%);
+            --header-bg: linear-gradient(90deg, #003366 60%, #00509e 100%);
+            --nav-bg: #00509e;
+            --nav-hover-bg: #003366;
+            --nav-hover-color: #ffd700;
+            --container-bg: #fff;
+            --section-bg: #f7faff;
+            --section-hover: #00509e22;
+            --text-main: #003366;
+            --text-sub: #e0e7ef;
+            --button-bg: linear-gradient(90deg, #00509e 60%, #003366 100%);
+            --button-hover-bg: linear-gradient(90deg, #ffd700 60%, #00509e 100%);
+            --button-hover-color: #003366;
+            --icon-bg: #e0e7ef;
+            --footer-bg: linear-gradient(90deg, #003366 60%, #00509e 100%);
+            --footer-color: #fff;
+            --shadow: 0 4px 32px #00336622;
+            --shadow-header: 0 2px 16px #00336633;
+            --shadow-section: 0 2px 8px #00509e11;
+            --shadow-section-hover: 0 6px 24px #00509e22;
+            --shadow-footer: 0 -2px 16px #00336622;
+            --border-radius-header: 32px;
+            --border-radius-container: 18px;
+            --border-radius-section: 16px;
+            --border-radius-footer: 24px;
+        }
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            background: var(--main-bg);
+            min-height: 100vh;
+            transition: background 0.3s;
+        }
+        body.dark-mode {
+            --main-bg: linear-gradient(135deg, #232b3b 0%, #1a2233 100%);
+            --header-bg: linear-gradient(90deg, #1a2233 60%, #232b3b 100%);
+            --nav-bg: #232b3b;
+            --nav-hover-bg: #00509e;
+            --nav-hover-color: #ffd700;
+            --container-bg: #232b3b;
+            --section-bg: #1a2233;
+            --section-hover: #00509e44;
+            --text-main: #ffd700;
+            --text-sub: #b0c4de;
+            --button-bg: linear-gradient(90deg, #00509e 60%, #232b3b 100%);
+            --button-hover-bg: linear-gradient(90deg, #ffd700 60%, #00509e 100%);
+            --button-hover-color: #232b3b;
+            --icon-bg: #232b3b;
+            --footer-bg: linear-gradient(90deg, #1a2233 60%, #232b3b 100%);
+            --footer-color: #ffd700;
+            --shadow: 0 4px 32px #00000044;
+            --shadow-header: 0 2px 16px #00000055;
+            --shadow-section: 0 2px 8px #00000033;
+            --shadow-section-hover: 0 6px 24px #00509e44;
+            --shadow-footer: 0 -2px 16px #00000033;
+            --border-radius-header: 32px;
+            --border-radius-container: 18px;
+            --border-radius-section: 16px;
+            --border-radius-footer: 24px;
+        }
+        header {
+            background: var(--header-bg);
+            color: var(--footer-color);
+            padding: 32px 0 18px 0;
+            text-align: center;
+            box-shadow: var(--shadow-header);
+            border-bottom-left-radius: var(--border-radius-header);
+            border-bottom-right-radius: var(--border-radius-header);
+            position: relative;
+        }
+        header h1 {
+            font-size: 2.7em;
+            letter-spacing: 2px;
+            margin-bottom: 0.2em;
+            text-shadow: 2px 2px 8px #00224488;
+        }
+        header p {
+            font-size: 1.2em;
+            margin-top: 0;
+            color: var(--text-sub);
+            text-shadow: 1px 1px 6px #00224455;
+        }
+        .mode-toggle {
+            position: absolute;
+            top: 18px;
+            right: 32px;
+            background: var(--container-bg);
+            color: var(--text-main);
+            border: none;
+            border-radius: 20px;
+            padding: 8px 18px;
+            font-size: 1em;
+            font-weight: 500;
+            cursor: pointer;
+            box-shadow: 0 2px 8px #00336622;
+            transition: background 0.2s, color 0.2s;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .mode-toggle:hover {
+            background: var(--button-hover-bg);
+            color: var(--button-hover-color);
+        }
+        nav {
+            background: var(--nav-bg);
+            text-align: center;
+            box-shadow: 0 2px 8px #00336622;
+            border-bottom: 2px solid #003366;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 16px 32px;
+            display: inline-block;
+            font-weight: 500;
+            font-size: 1.1em;
+            transition: background 0.2s, color 0.2s, transform 0.15s;
+            border-radius: 0 0 18px 18px;
+            margin: 0 2px;
+        }
+        nav a.active, nav a:focus {
+            background: var(--nav-hover-bg);
+            color: var(--nav-hover-color);
+        }
+        nav a:hover {
+            background: var(--nav-hover-bg);
+            color: var(--nav-hover-color);
+            transform: scale(1.07);
+        }
+        .container {
+            max-width: 1100px;
+            margin: 40px auto 30px auto;
+            background: var(--container-bg);
+            border-radius: var(--border-radius-container);
+            box-shadow: var(--shadow);
+            padding: 40px 32px 32px 32px;
+            transition: background 0.3s;
+        }
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 32px;
+        }
+        h2 {
+            color: var(--text-main);
+            font-size: 2em;
+            margin-bottom: 0.3em;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .service-section {
+            background: var(--section-bg);
+            border-radius: var(--border-radius-section);
+            box-shadow: var(--shadow-section);
+            padding: 28px 20px 20px 20px;
+            transition: box-shadow 0.2s, background 0.3s;
+            min-height: 320px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            margin-bottom: 0;
+        }
+        .service-section:hover {
+            box-shadow: var(--shadow-section-hover);
+        }
+        .service-section ul {
+            padding-left: 24px;
+            margin-bottom: 12px;
+        }
+        .service-section li {
+            margin-bottom: 7px;
+            font-size: 1.08em;
+        }
+        .service-actions {
+            margin-top: 18px;
+        }
+        button {
+            background: var(--button-bg);
+            color: white;
+            border: none;
+            padding: 12px 26px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 1.08em;
+            margin: 6px 6px 0 0;
+            cursor: pointer;
+            border-radius: 6px;
+            font-weight: 500;
+            box-shadow: 0 2px 8px #00336622;
+            transition: background 0.2s, color 0.2s, transform 0.13s;
+        }
+        button:hover {
+            background: var(--button-hover-bg);
+            color: var(--button-hover-color);
+            transform: scale(1.04);
+        }
+        .option-icon {
+            vertical-align: middle;
+            margin-right: 8px;
+            width: 28px;
+            height: 28px;
+            border-radius: 6px;
+            background: var(--icon-bg);
+            padding: 2px;
+            box-shadow: 0 1px 4px #00336622;
+        }
+        .taxi-icon {
+            width: 32px;
+            height: 32px;
+        }
+        button .option-icon {
+            margin-right: 6px;
+            width: 22px;
+            height: 22px;
+            background: transparent;
+            box-shadow: none;
+        }
+        [id$="-times"] {
+            display: block;
+            margin: 10px 0 6px 0;
+            color: #00509e;
+            font-weight: bold;
+            font-size: 1.08em;
+            letter-spacing: 1px;
+        }
+        body.dark-mode [id$="-times"] {
+            color: #ffd700;
+        }
+        footer {
+            background: var(--footer-bg);
+            color: var(--footer-color);
+            padding: 20px 0;
+            margin-top: 40px;
+            font-size: 1.1em;
+            border-top-left-radius: var(--border-radius-footer);
+            border-top-right-radius: var(--border-radius-footer);
+            box-shadow: var(--shadow-footer);
+        }
+        .app-title {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 18px;
+        }
+        .app-title img {
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            background: #fff;
+            box-shadow: 0 2px 8px #00336622;
+        }
+        @media (max-width: 900px) {
+            .container { padding: 16px 4px; }
+            .services-grid { gap: 16px; }
+        }
+        @media (max-width: 700px) {
+            nav a { padding: 10px 6px; font-size: 1em; }
+            h2 { font-size: 1.2em; }
+            header h1 { font-size: 1.5em; }
+            .mode-toggle { right: 10px; top: 10px; padding: 6px 10px; font-size: 0.9em; }
+            .services-grid { gap: 12px; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <button class="mode-toggle" id="modeToggle" title="Changer le mode">
+            <span id="modeIcon">🌙</span> <span id="modeText">Mode sombre</span>
+        </button>
+        <div class="app-title">
+            <img src="https://img.icons8.com/ios-filled/100/ffffff/train.png" alt="Logo">
+            <div>
+                <h1>Trans DZ</h1>
+                <p>all what you need in one</p>
+            </div>
+        </div>
+    </header>
+    <nav>
+        <a href=""><img class="option-icon" src="https://img.icons8.com/ios-filled/50/ffffff/train.png" alt="Train">Train (SNTF)</a>
+        <a href="my futer project/bus.html"><img class="option-icon" src="https://img.icons8.com/ios-filled/50/ffffff/bus.png" alt="Bus">Bus (ETUSA)</a>
+        <a href="www.setram.dz><img class="option-icon" src="https://img.icons8.com/ios-filled/50/ffffff/tram.png" alt="Tramway">Tramway (SETRAM)</a>
+        <a href="www.metroalgire.dz"><img class="option-icon" src="https://img.icons8.com/ios-filled/50/ffffff/subway.png" alt="Metro">Métro (Alger)</a>
+        <a href=""><img class="option-icon" src="https://img.icons8.com/ios-filled/50/ffffff/taxi.png" alt="Taxi">Taxi</a>
+    </nav>
+    <div class="container">
+        <div class="services-grid">
+            <section id="sntf" class="service-section">
+                <h2><img class="option-icon" src="https://img.icons8.com/ios-filled/50/003366/train.png" alt="Train">SNTF - Train</h2>
+                <p>Trains interurbains et régionaux à travers l'Algérie.</p>
+                <ul>
+                    <li>Horaires et réservations</li>
+                    <li>Correspondances avec autres réseaux</li>
+                    <li>
+                        <a href="my futer project/train-alger.html" style="color:#00509e;font-weight:bold;text-decoration:underline;">
+                            Voir les trains de la Wilaya d'Alger
+                        </a>
+                    </li>
+                </ul>
+                <div class="service-actions">
+                    <span id="sntf-times"></span>
+                    <button onclick="fetchAndDisplayTimes('sntf')">Afficher les horaires</button>
+                    <button onclick="alert('Accès à la réservation SNTF')">Réserver un train</button>
+                </div>
+            </section>
+            <section id="etusa" class="service-section">
+                <h2><img class="option-icon" src="https://img.icons8.com/ios-filled/50/003366/bus.png" alt="Bus">ETUSA - Bus</h2>
+                <p>Réseau de bus urbains pour la ville d'Alger.</p>
+                <ul>
+                    <li>Lignes principales et horaires</li>
+                    <li>Connexion avec gares SNTF et stations de métro</li>
+                    <li>
+                        <a href="my futer project/bus.html" style="color:#00509e;font-weight:bold;text-decoration:underline;">
+                            Voir les réseaux ETUSA et Mahatati
+                        </a>
+                    </li>
+                </ul>
+                <div class="service-actions">
+                    <span id="etusa-times"></span>
+                    <button onclick="fetchAndDisplayTimes('etusa')">Afficher les horaires</button>
+                    <button onclick="alert('Accès à la réservation ETUSA')">Réserver un bus</button>
+                </div>
+            </section>
+            <section id="setram" class="service-section">
+                <h2><img class="option-icon" src="https://img.icons8.com/ios-filled/50/003366/tram.png" alt="Tramway">SETRAM - Tramway</h2>
+                <p>Tramways modernes desservant plusieurs villes algériennes.</p>
+                <ul>
+                    <li>Plan des lignes de tramway</li>
+                    <li>Intégration avec bus et trains</li>
+                </ul>
+                <div class="service-actions">
+                    <span id="setram-times"></span>
+                    <button onclick="fetchAndDisplayTimes('setram')">Afficher les horaires</button>
+                    <button onclick="alert('Accès à la réservation SETRAM')">Réserver un tramway</button>
+                </div>
+            </section>
+            <section id="metro" class="service-section">
+                <h2><img class="option-icon" src="https://img.icons8.com/ios-filled/50/003366/subway.png" alt="Metro">Métro d'Alger</h2>
+                <p>Réseau de métro rapide pour la capitale.</p>
+                <ul>
+                    <li>Stations et horaires</li>
+                    <li>Transfert facile vers ETUSA, SETRAM et SNTF</li>
+                </ul>
+                <div class="service-actions">
+                    <span id="metro-times"></span>
+                    <button onclick="fetchAndDisplayTimes('metro')">Afficher les horaires</button>
+                    <button onclick="alert('Accès à la réservation Métro Alger')">Réserver un métro</button>
+                </div>
+            </section>
+            <section id="taxi" class="service-section">
+                <h2><img class="option-icon taxi-icon" src="https://img.icons8.com/ios-filled/50/003366/taxi.png" alt="Taxi">Taxi</h2>
+                <p>Services de taxi disponibles à Alger et dans d'autres villes.</p>
+                <ul>
+                    <li>Réservation rapide via applications mobiles</li>
+                    <li>Services disponibles 24h/24</li>
+                </ul>
+                <div class="service-actions">
+                    <span id="taxi-times"></span>
+                    <button onclick="fetchAndDisplayTimes('taxi')">Afficher les horaires</button>
+                    <button onclick="window.open('https://www.yassir.com/', '_blank')">
+                        <img class="option-icon" src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Yassir_logo.png" alt="Yassir">Yassir
+                    </button>
+                    <button onclick="window.open('https://indrive.com/', '_blank')">
+                        <img class="option-icon" src="https://seeklogo.com/images/I/indrive-logo-5B7B2E1E7B-seeklogo.com.png" alt="InDrive">InDrive
+                    </button>
+                    <button onclick="window.open('https://www.heetch.com/', '_blank')">
+                        <img class="option-icon" src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Heetch_logo.png" alt="Heetch">Heetch
+                    </button>
+                </div>
+            </section>
+        </div>
+    </div>
+    <footer>
+        &copy; 2024 Transport Link Algeria
+    </footer>
+    <script src="index.js"></script>
+    <script>
+        // Example API endpoints (replace with real APIs if available)
+        const apiEndpoints = {
+            sntf: "https://api.example.com/sntf/times",
+            etusa: "https://api.example.com/etusa/times",
+            setram: "https://api.example.com/setram/times",
+            metro: "https://api.example.com/metro/times",
+            taxi: "https://api.example.com/taxi/times"
+        };
+
+        function fetchAndDisplayTimes(option) {
+            const displayId = option + "-times";
+            const displayElem = document.getElementById(displayId);
+            if (!displayElem) return;
+            displayElem.textContent = "Chargement des horaires...";
+            setTimeout(() => {
+                let times = [];
+                switch(option) {
+                    case "sntf":
+                        times = ["08:00", "10:30", "13:00", "16:45"];
+                        break;
+                    case "etusa":
+                        times = ["06:15", "07:00", "07:45", "08:30", "09:15"];
+                        break;
+                    case "setram":
+                        times = ["05:30", "06:00", "06:30", "07:00"];
+                        break;
+                    case "metro":
+                        times = ["05:00", "05:20", "05:40", "06:00"];
+                        break;
+                    case "taxi":
+                        times = ["Disponible 24h/24"];
+                        break;
+                }
+                displayElem.textContent = "Horaires : " + times.join(" | ");
+            }, 800);
+        }
+
+        // Dark/Light mode toggle logic
+        const modeToggle = document.getElementById('modeToggle');
+        const modeIcon = document.getElementById('modeIcon');
+        const modeText = document.getElementById('modeText');
+
+        function setMode(isDark) {
+            if (isDark) {
+                document.body.classList.add('dark-mode');
+                modeIcon.textContent = "☀️";
+                modeText.textContent = "Mode clair";
+                localStorage.setItem('theme', 'dark');
+            } else {
+                document.body.classList.remove('dark-mode');
+                modeIcon.textContent = "🌙";
+                modeText.textContent = "Mode sombre";
+                localStorage.setItem('theme', 'light');
+            }
+        }
+
+        // Load mode from localStorage
+        const savedTheme = localStorage.getItem('theme');
+        setMode(savedTheme === 'dark');
+
+        modeToggle.onclick = function() {
+            setMode(!document.body.classList.contains('dark-mode'));
+        };
+
+        // Highlight nav link on scroll
+        const navLinks = document.querySelectorAll('nav a');
+        const sections = Array.from(document.querySelectorAll('.service-section'));
+        window.addEventListener('scroll', () => {
+            let fromTop = window.scrollY + 120;
+            navLinks.forEach(link => link.classList.remove('active'));
+            let current = sections.find(section => section.offsetTop <= fromTop && section.offsetTop + section.offsetHeight > fromTop);
+            if (current) {
+                let id = current.getAttribute('id');
+                let activeLink = document.querySelector(`nav a[href="#${id}"]`);
+                if (activeLink) activeLink.classList.add('active');
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+script{
+    background-color: blueviolet;
+    background-image: -moz-linear-gradient();
+}
+body{
+    background-attachment: fixed;
+
+}
+
