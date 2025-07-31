@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basketball</title>
+    <link href="lemmo css.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="header-top">
+            <div class="logo-title">
+                <h1><b><em>SPORT STORE</em></b></h1>
+                <h2><b><em>Basketball Collection</em></b></h2>
+            </div>
+            <div>
+                <select id="lang-select" name="lang">
+                    <option value="EN" selected>EN</option>
+                    <option value="FR">FR</option>
+                    <option value="AR">AR</option>
+                </select>
+            </div>
+        </div>
+        <nav>
+            <a href="lemmo web site travaux pratique 10.html">Home</a>
+            <a href="#">Shop</a>
+            <a href="#">Contact Us</a>
+            <a href="#">About Us</a>
+            <a href="#">Card</a>
+        </nav>
+    </header>
+    <div class="products-container">
+        <div class="product-card">
+            <img src="basketball-ball.jpg" alt="Basketball Ball">
+            <h3>Basketball Ball</h3>
+            <p>Official size and training basketballs.</p>
+            <button>Shop Balls</button>
+        </div>
+        <div class="product-card">
+            <img src="basketball-shoes.jpg" alt="Basketball Shoes">
+            <h3>Basketball Shoes</h3>
+            <p>High-performance shoes for all court types.</p>
+            <button>Shop Shoes</button>
+        </div>
+        <div class="product-card">
+            <img src="basketball-jersey.jpg" alt="Basketball Jersey">
+            <h3>Basketball Jersey</h3>
+            <p>Team jerseys and training shirts for players.</p>
+            <button>Shop Jerseys</button>
+        </div>
+        <div class="product-card">
+            <img src="basketball-hoop.jpg" alt="Basketball Hoop">
+            <h3>Basketball Hoop</h3>
+            <p>Portable and wall-mounted hoops for home or gym.</p>
+            <button>Shop Hoops</button>
+        </div>
+        <div class="product-card">
+            <img src="basketball-accessories.jpg" alt="Accessories">
+            <h3>Accessories</h3>
+            <p>Bags, headbands, wristbands, and more.</p>
+            <button>Shop Accessories</button>
+        </div>
+    </div>
+</body>
+</html>
